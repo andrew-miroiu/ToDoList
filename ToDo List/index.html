@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+    <dialog id="addTaskDialog">
+        <form id="addTask-form">
+            <fieldset>
+                <p>
+                    <label for="taskTitle">Title</label>
+                    <input type="text" name="title" id="taskTitle" class="text" autofocus="">
+                </p>
+                <p>
+                    <label for="taskDescription">Description</label>
+                    <input type="text" name="description" id="taskDescription" value="" class="text">
+                </p>
+                <p>
+                    <label for="taskDateDue">Date Due</label>
+                    <input type="date" name="dateDue" id="taskDateDue">
+                </p>
+                <p>
+                    <label for="taskPriority">Priority</label>
+                    <select name="priority" id="taskPriority">
+                        <option value="low">low</option>
+                        <option value="medium" selected="">medium</option>
+                        <option value="high">high</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="taskCategory">Category</label>
+                    <input name="category" id="taskCategory">
+                </p>
+                <button type="button" id="submitTaskBtn">Submit</button>
+                <button type="button" id="closeAddTaskDisplay">Cancel</button>
+            </fieldset>
+        </form>
+    </dialog>
+
+    <dialog id = "addCategoryDialog">
+        <form id="addCategory-form">
+            <fieldset>
+                <p>
+                    <label for="categoryName">Category Name</label>
+                    <input type="text" name="name" id="categoryName" class="text" autofocus="">
+                </p>
+                <button type="button" id="submitCategoryBtn">Submit</button>
+                <button type="button" id="closeAddCategoryDisplay">Cancel</button>
+            </fieldset>
+        </form>
+    </dialog>
+
+    <div class="control">
+        <button id="addCategoryBtn">Add Category</button>
+        <button id="addTaskBtn">Add Task</button>
+        <div class="categories" id="categories">
+
+        </div>
+    </div>
+    <div class="taskList" id ="taskList">
+        
+    </div>
+
+    </div>
+    <script type="module" src="App.js"></script>
+
+
+</body>
+</html>
